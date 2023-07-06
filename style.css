@@ -13,6 +13,14 @@ html, body {
     width: auto;
 }
 
+ul {
+    list-style-type: none;
+}
+
+li {
+    list-style-type: none;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 1fr;
@@ -53,6 +61,7 @@ html, body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px / 1 fr));
     grid-template-rows: repeat(2, 1fr);
+    grid-column: 2 / 7;
     background-color: rgb(255, 255, 255);
     padding-left: 2rem;
     padding-right: 2rem;
@@ -88,21 +97,20 @@ html, body {
 
 .main-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px / 1fr));
-    grid-column: 2 / 6;
-    grid-row: 3 / 4;
+    grid-template-columns: 2fr / 1fr;
+    grid-template-rows: repeat(1, .5rem) repeat(2, 1fr);
+    grid-column: 2 / 5;
+    grid-row: 2 / 4;
     background-color: rgb(209, 209, 209);
-    padding: 2rem 2rem 1rem 1rem;
-}
 
+}
 
 .containerOne {
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-row: 2 / 4;
-    gap: 2rem;
-    width: clamp(500px, 1fr, 2fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr / 1fr / 1fr;
+    grid-column: 2 / 4;
+    grid-row: 1 / 4;
 }
 
 .containerTwo {
@@ -130,27 +138,85 @@ html, body {
 }
 
 #boxes {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 2fr;
     font-size: 20px;
     background-color: rgb(255, 255, 255);
     border-left: 10px solid rgb(255, 153, 0);
     border-radius: 10px;
+    padding: 30px 20px;
+    z-index: 1;
+}
+
+.boxOne > ul {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.boxTwo > ul {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.boxThree > ul {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.boxFour > ul {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.boxFive > ul {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.boxSix > ul {
+    font-size: 23px;
+    font-weight: 600;
 }
 
 #round {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 2fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr;
     font-size: 15px;
     background-color: rgb(255, 255, 255);
     padding: 20px;
 }
 
+
 #square {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
     font-size: 15px;
-    border-left: 10px pink bold;
     background-color: rgb(255, 255, 255);
     padding: 20px;
 }
+
+.yourProject > li {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.yourProject {
+    display: grid;
+    position: relative;
+    z-index: 2;
+    grid-column: span 2;
+}
+
+.announcements > li {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.trending > li {
+    font-size: 25px;
+    font-weight: bold;
+}
+
