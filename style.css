@@ -23,14 +23,14 @@ li {
 .container {
     display: grid;
     grid-template-columns: 1fr repeat(2, 2fr);
-    grid-template-rows: 140px repeat(3, 1fr);
+    grid-template-rows: 200px repeat(3, 1fr);
 }
 
 /* side bar */ 
 
 .sidebar {
     display: grid;
-    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
     grid-row: span 2;
     background-color: rgb(43, 138, 228);
     padding-left: 3rem;
@@ -38,6 +38,7 @@ li {
     padding-bottom: 30rem;
     color: white;
     font-weight: 700;
+    gap: 50px;
 }
 
 .navigationOne {
@@ -45,31 +46,22 @@ li {
     grid-template-columns: repeat(2, 50px);
     grid-template-rows: 1;
     font-size: 35px;
-    padding-top: 1rem;
+    padding-bottom: 7rem;
+    padding-top: 1.5rem;
+    align-items: center;
 }
 
 .navigationTwo {
     display: grid;
     font-size: 30px;
-    gap: 15px;
-    padding-top: 3rem;
+    gap: 35px;
 }
 
 .navigationThree {
     display: grid;
     font-size: 30px;
-    gap: 15px;
-    padding-top: 3rem;
-}
-
-.userNameOne,
-.userNameTwo,
-.greeting {
-    font-weight: 600;
-}
-
-.userNameTwo {
-    font-size: 20px;
+    gap: 35px;
+    padding-top: 26rem;
 }
 
 .clover {
@@ -88,7 +80,7 @@ li {
     grid-column: 2 / span 4;
     grid-row: 1;
     background-color: rgb(255, 255, 255);
-    padding-left: 2rem;
+    padding-left: 3rem;
     padding-right: 2rem;
     z-index: 6;
     gap: 1rem;
@@ -96,12 +88,11 @@ li {
 
 .topBox {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(100px / 1 fr));
     grid-column: 1 / 5;
-    grid-row: 1;
     justify-content:space-between;
     align-items: center;
-    padding-top: 1rem;
+    gap: 50px;
 }
 
 .bottomBox {
@@ -112,6 +103,7 @@ li {
     grid-row: 2;
     align-items: center;
     gap: 40px;
+    padding-top: 2rem;
 }
 
 #search {
@@ -127,11 +119,37 @@ li {
     height: 1.5rem;
 }
 
+.alarm {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: 3;
+    grid-template-rows: 1;
+    grid-row: 1;
+    height: 5.5rem;
+    width: 5.5rem;
+    padding: 1px 40px;
+    font-weight: 700;
+    align-items: center;
+}
+
+.userNameOne {
+    display: grid;
+    grid-column: 5;
+    max-width: 100%;
+    height: 2rem;
+    padding: 1px 40px;
+    font-weight: 700;
+    align-items: center;
+}
+
 .logo {
+    display: grid;
+    grid-column: 4;
     height: 2.5rem;
     width: 2.5rem;
     background-color: orange;
     border-radius: 30px;
+    align-items: center;
 }
 
 .logoTwo {
@@ -139,6 +157,16 @@ li {
     height: 3.5rem;
     background-color: orange;
     border-radius: 35px;
+}
+
+.userNameOne,
+.userNameTwo,
+.greeting {
+    font-weight: 600;
+}
+
+.userNameTwo {
+    font-size: 20px;
 }
 
 .new,
@@ -162,8 +190,8 @@ li {
 
 .main-content {
     display: grid;
-    grid-template-columns: 200px 100px;
-    grid-template-rows: 10px 200px 150px;
+    grid-template-columns: repeat(auto-fit, minmax(100px / 300px));
+    grid-template-rows: 5rem 200px 150px;
     grid-column: 2 / 5;
     grid-row: 2;
     z-index: 2;
@@ -179,8 +207,9 @@ li {
 
 .containerOne {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px / 1 fr));
-    grid-column: 1 / span 4;
+    grid-template-columns: repeat(auto-fit, minmax(100px / 200px));
+    grid-template-rows: repeat(3, 1 fr);
+    grid-column: 1 / span 2;
     grid-row: 1 / span 5;
     gap: 30px;
     z-index: 1;
@@ -189,16 +218,31 @@ li {
 
 #boxes {
     display: grid;
-    grid-template-rows: repeat(2, 100px);
-    grid-template-columns: 300px;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     width: 25rem;
     height: 15rem;
     font-size: 20px;
     background-color: rgb(255, 255, 255);
     border-left: 10px solid rgb(255, 153, 0);
     border-radius: 10px;
-    padding: 30px 45px;
+    padding-top: 35px;
+    padding-bottom: 50px;
+    padding-left: 45px;
+    padding-right: 10px;
     text-align: start;
+    z-index: 1;
+}
+
+
+.icon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 7rem;
+    height: 7rem;
+    gap: 20px;
+    padding-left: 17rem;
+    padding-top: 1.8rem;
 }
 
 .boxOne > ul,
@@ -226,6 +270,7 @@ li {
     padding-top: 5rem;
 }
 
+
 /* end of containerOne */
 
 
@@ -233,12 +278,13 @@ li {
 
 .containerTwo {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px / 1 fr));
     grid-template-rows: 50px repeat(3, 1fr);
     grid-column: span 5;
     grid-row: 1 / 2;
     padding-right: 3rem;
     padding-left: 2rem;
+    padding-top: 1.4rem;
     z-index: 1;
 }
 
@@ -249,7 +295,7 @@ li {
     grid-column: span 4;
     font-size: 15px;
     background-color: rgb(255, 255, 255);
-    padding: 20px;
+    padding: 30px;
     width: 15rem;
     height: 5rem;
 }
@@ -293,7 +339,7 @@ li {
 
 .containerThree {   
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(100px / 200px));
     grid-template-rows: 40px repeat(4, 1fr);
     grid-column: span 5;
     grid-row: 4 / 5;
@@ -303,14 +349,32 @@ li {
     z-index: 3;
 }
 
+.iconFour,
+.iconFive, 
+.iconSix,
+.iconSeven {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column: span 1;
+    grid-row: 1;
+    height: 3rem;
+    width: 3rem;
+    z-index: 4;
+}
+
 #square {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr 4fr;
     grid-row: span 4;
-    grid-column: span 4;
+    grid-column: span 2;
     font-size: 15px;
     background-color: rgb(255, 255, 255);
-    padding: 20px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: .5rem;
     width: 15rem;
     height: 6.5rem;
 }
