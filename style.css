@@ -9,7 +9,7 @@ body,
     background-color: #0891b2;
     max-width: 100vw;
     max-height: 100vh;
-    
+    overflow: auto;
 }
 
 ul {
@@ -22,22 +22,22 @@ li {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr repeat(2, 2fr);
-    grid-template-rows: 200px repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 210px 1fr;
 }
 
 /* side bar */ 
 
 .sidebar {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 6rem 1fr 1fr 2fr;
     grid-template-columns: 1fr 4fr;
-    grid-row: span 2;
-    background-color: #083344;
+    grid-row: 1 / 4;
+    background-color: #155e75;
     padding-left: 3rem;
     padding-right: 7rem;
     padding-bottom: 30rem;
-    color: white;
+    color: #fefce8;
     font-weight: 700;
     gap: 50px;
 }
@@ -45,7 +45,7 @@ li {
 .navigationOne {
     display: grid;
     grid-template-columns: 75px 1fr;
-    grid-template-rows: 1;
+    grid-template-rows: auto 1fr 1fr;
     font-size: 35px;
     padding-bottom: 7rem;
     padding-top: 1.5rem;
@@ -55,7 +55,7 @@ li {
 .navigationTwo {
     display: grid;
     grid-template-columns: 50px 1fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 45px);
     grid-column: 1;
     grid-row: 2;
     font-size: 30px;
@@ -76,7 +76,7 @@ li {
 .navigationThree {
     display: grid;
     grid-template-columns: 50px 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 45px 45px 45px;
     grid-column: 1;
     grid-row: 3;
     font-size: 30px;
@@ -99,7 +99,7 @@ li {
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     grid-row: 1 / 6;
-    gap: 30px;
+    gap: 41px;
     height: 2rem;
     width: 2rem;
     grid-column: 1;
@@ -110,7 +110,7 @@ li {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-row: 1 / 3;
-    gap: 36px;
+    gap: 42px;
     height: 2rem;
     width: 2rem;
     grid-column: 1;
@@ -129,13 +129,14 @@ li {
 
 .header {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px / 1 fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px / 1 fr));
     grid-template-rows: repeat(2, 60px);
-    grid-column: 2 / span 4;
-    grid-row: 1;
+    grid-column: span 2;
+    grid-row: 1 ;
     background-color: #cffafe;
+    padding-top: 1.5rem;
     padding-left: 3rem;
-    padding-right: 2rem;
+    padding-right: 3rem;
     z-index: 6;
     gap: 1rem;
 }
@@ -147,7 +148,7 @@ li {
     justify-content: space-between;
     align-items: center;
     gap: 50px;
-    padding-right: 5.5rem;
+    padding-right: 4.9rem;
 }
 
 .bottomBox {
@@ -159,7 +160,7 @@ li {
     align-items: center;
     gap: 40px;
     padding-top: 2rem;
-    padding-right: 2rem;
+    padding-right: 1.5rem;
 }
 
 #search {
@@ -177,7 +178,7 @@ li {
 }
 
 .alarm {
-    width: 2.5rem;
+    width: 2rem;
     font-weight: 700;
 }
 
@@ -188,8 +189,8 @@ li {
 }
 
 .logo {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 3rem;
+    width: 3rem;
     background-color: #14b8a6;;
     border-radius: 30px;
 }
@@ -234,13 +235,12 @@ li {
 
 .main-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px / 300px));
-    grid-template-rows: 5rem 200px 150px;
+    grid-template-columns: 2fr 45rem;
+    grid-template-rows: 10px repeat(3, 90px) 1rem repeat(4, 80px);
     grid-column: 2 / 5;
     grid-row: 2;
     z-index: 2;
     justify-items: center;
-    align-self:auto;
     gap: 1rem;
 }
 
@@ -251,33 +251,33 @@ li {
 
 .containerOne {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px / 200px));
-    grid-template-rows: 7.5 rem;
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 5;
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(100px / 300px));
+    grid-template-rows: 120px 300px 300px;
+    grid-column: 1 / 2;
+    grid-row: 2;
+    gap: 15px;
     z-index: 1;
     padding-left: 2rem;
 }
 
 #boxes {
     display: grid;
-    grid-template-rows: 30px 100px 100px;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: 30px repeat(3, 50px);
+    grid-template-columns: 300px;
     width: 25rem;
-    height: 15rem;
+    height: 13rem;
     font-size: 20px;
     background-color: #ccfbf1;
+    color: #155e75;
     border-left: 10px solid #14b8a6;
     border-radius: 10px;
     padding-top: 35px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     padding-left: 45px;
     padding-right: 10px;
     text-align: start;
     z-index: 1;
 }
-
 
 .icon {
     display: grid;
@@ -303,6 +303,7 @@ li {
     font-size: 30px;
     font-weight: bold;
     text-align: left;
+    color: #082f49;
 }
 
 .yourProject {
@@ -322,37 +323,41 @@ li {
 
 .containerTwo {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px / 1 fr));
-    grid-template-rows: 50px repeat(3, 1fr);
-    grid-column: span 5;
-    grid-row: 1 / 2;
-    padding-right: 3rem;
-    padding-left: 2rem;
-    padding-top: 1.4rem;
-    z-index: 1;
+    grid-template-rows: 2rem repeat(3, 80px);
+    grid-template-columns: auto;
+    grid-column: 2;
+    grid-row: 3 / 6;  
 }
 
-#round {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-row: span 1;
-    grid-column: span 4;
-    font-size: 15px;
+.boxSeven,
+.boxEight,
+.boxNine {
+    color: #155e75;
+    gap: 20px;
     background-color: #ccfbf1;
-    padding: 30px;
-    width: 15rem;
-    height: 5rem;
+    height: 1px;
+    width: 200px;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    padding-left: 40px;
+    padding-right: 100px;
+    
 }
 
 .boxSeven {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    margin-top: 5.5rem;
+    padding-bottom: 100px;
+}
+
+.boxEight {
+    padding-bottom: 100px;
 }
 
 .boxNine {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    padding-bottom: 120px;
 }
 
 .boxSeven > ul,
@@ -366,66 +371,52 @@ li {
     font-size: 30px;
     font-weight: bold;
     text-align: left;
+    color: #082f49;
 }
 
-.announcements {
-    display: grid;
-    position: relative;
-    z-index: 2;
-    grid-column: span 2;
-    padding-top: 5rem;
-}
+
 
 /* end of containerTwo */
 
 
 /* containerThree */
 
-.containerThree {   
+.containerThree {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px / 200px));
-    grid-template-rows: 40px repeat(4, 1fr);
-    grid-column: span 5;
-    grid-row: 4 / 5;
-    padding-right: 3rem;
-    padding-left: 2rem;
-    padding-top: 8rem;
-    z-index: 3;
+    grid-template-columns: auto;
+    grid-template-rows: 2.5rem repeat(4, 90px);
+    grid-column: 2;
+    grid-row: 8;
+    padding-top: 3.5rem;
 }
 
-.iconFour,
-.iconFive, 
-.iconSix,
-.iconSeven {
+.personOne,
+.personTwo,
+.personThree,
+.personFour {   
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column: span 1;
-    grid-row: 1;
-    height: 3rem;
-    width: 3rem;
-    z-index: 4;
-}
-
-#square {
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: 1fr 4fr;
-    grid-row: span 4;
-    grid-column: span 2;
-    font-size: 15px;
+    grid-template-columns: 50px 100px;
+    grid-auto-rows: minmax(20px, 50px);
+    color: #155e75;
+    gap: 20px;
     background-color: #ccfbf1;
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: .5rem;
-    width: 15rem;
-    height: 6.5rem;
+    height: 1px;
+    width: 200px;
+    padding-top: 45px;
+    padding-bottom: 80px;
+    padding-left: 40px;
+    padding-right: 100px;
+}
+
+
+.groupTwo {
+    width: 200px;
 }
 
 .personOne {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    
 }
 
 .personFour {
@@ -443,13 +434,21 @@ li {
 .boxEight > li,
 .boxNine > li,
 .groupTwo > li {
-    color: #696969;
+    color: #0e7490;
 }
 
 
 .trending > li {
     font-size: 25px;
     font-weight: bold;
+    color: #082f49;
+}
+
+.trending {
+    display: grid;
+    grid-row: 1;
+    z-index: 3;
+
 }
 
 /* end of containerThree */
