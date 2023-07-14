@@ -195,10 +195,33 @@ h4:hover,
     height: 2rem;
 }
 
+.magnify:hover {
+    transform: scale(1.5); 
+}
+
 .alarm {
     width: 2rem;
     font-weight: 700;
 }
+
+.alarm:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
 
 .userNameOne {
     width: 200px;
@@ -246,6 +269,13 @@ h4:hover,
     text-align: center;
 }
 
+
+.new:hover,
+.upload:hover,
+.share:hover {
+    color: rgb(43, 74, 141);
+    transform: scale(0.9); 
+}
 
 
 /* end of header 
@@ -335,6 +365,11 @@ h4:hover,
     padding-top: 5rem;
 }
 
+.iconOne:hover,
+.iconTwo:hover,
+.iconThree:hover {
+    transform: scale(1.2); 
+}
 
 /* end of containerOne */
 
@@ -379,6 +414,18 @@ h4:hover,
     padding-bottom: 120px;
 }
 
+.boxSeven::after,
+.boxEight::after {
+    display: block;
+    content: "";
+    background: rgb(54, 189, 189);
+    width: 250px;
+    height: 1px;
+    position: absolute;
+    margin-top: 10px;
+
+}
+
 .boxSeven > ul,
 .boxEight > ul,
 .boxNine > ul {
@@ -401,6 +448,7 @@ h4:hover,
     grid-column: span 2;
     padding-top: 5rem;
 }
+
 /* end of containerTwo */
 
 
