@@ -158,13 +158,13 @@ h4:hover,
 
 .topBox {
     display: grid;
-    grid-template-columns: 1rem 5fr repeat(3, 3rem);
+    grid-template-columns: 1rem 5fr repeat(3, 5rem);
     grid-row: 1;
     grid-column: 1 / span 5;
     justify-content: space-between;
     align-items: center;
     gap: 50px;
-    padding-right: 4.9rem;
+    padding-right: 3rem;
     z-index: 6;
 }
 
@@ -182,12 +182,13 @@ h4:hover,
 }
 
 #search {
-    width: 30rem;
+    width: 45rem;
     border-radius: 15px;
     border: 1px #000 solid;
     padding: 5px 5px 5px 5px;
     z-index: 3;
     background-color:#ccfbf1;
+    border-color: #46c2a7;
 }
 
 .magnify {
@@ -202,6 +203,7 @@ h4:hover,
 .alarm {
     width: 2rem;
     font-weight: 700;
+    margin-left: 5rem;
 }
 
 .alarm:hover {
@@ -234,6 +236,7 @@ h4:hover,
     width: 3rem;
     background-color: #14b8a6;;
     border-radius: 30px;
+    margin-left: 2rem;
 }
 
 .logoTwo {
@@ -336,7 +339,7 @@ h4:hover,
     height: 8rem;
     gap: 20px;
     padding-left: 16rem;
-    padding-top: 5rem;
+    padding-top: 6rem;
 }
 
 .boxOne > ul,
